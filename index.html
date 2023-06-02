@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="styles.css" rel="stylesheet" >
+    <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Quiz App</title>
 </head>
+
 <body>
-    <header class="title">
+    <header class="quiz-header">
         <h1>How Much Do You Know About Marvel?</h1>
     </header>
+
+    <section id="question-number" class="hide">
+        <h2>Question x of y</h2>
+    </section>
 
     <div class="container">
         <div id="question-container" class="hide">
@@ -28,5 +34,12 @@
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
     </div>
+
+    <div id="score-tracker" class="score-grid hide">
+        <h1>Score:</h1>
+        <div id="score-up">0</div>
+    </div>
+
 </body>
+
 </html>
