@@ -132,6 +132,6 @@ color: white;
  @media(max-width:800px) {
     #contact-img {
        height: 125px;
-       width: 450px;
+       width: 300px;
     }
  }
