@@ -126,13 +126,14 @@ color: white;
     width: 600px;
     padding: 0;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    padding-top: 0%;
  }
 
  @media(max-width:800px) {
     #contact-img {
        height: 125px;
-       width: 300px;
+       width: 350px;
     }
  }
 
