@@ -2,7 +2,7 @@ const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
-const progressElement = document.getElementById('progress')
+//const progressElement = document.getElementById('progress')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const scoreTracker = document.getElementById('score-tracker');
 const scoreUpElement = document.getElementById('score-up');
@@ -22,7 +22,7 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
-    progressElement.classList.remove('hide')
+ //   progressElement.classList.remove('hide')
     setNextQuestion()
     scoreTracker.classList.remove('hide');
     scoreUpElement.textContent = 0;
@@ -93,7 +93,7 @@ function processResults(isCorrect) {
         return;
     }
 
-    const scoreUp = parseInt(scoreUpElement.textContent, 10) || 0;
+    const scoreUp = parseInt(scoreUpElement.textContent, 10);
 
     scoreUpElement.textContent = scoreUp + 10;
 }
