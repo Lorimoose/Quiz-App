@@ -2,10 +2,11 @@ const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
-const questionNumber = document.getElementById('question-number')
+const progressElement = document.getElementById('progress')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const scoreTracker = document.getElementById('score-tracker');
 const scoreUpElement = document.getElementById('score-up');
+const endGame = document.getElementById('end-game')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -17,10 +18,11 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     startButton.classList.add('hide')
+    endGame.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
-    questionNumber.classList.remove('hide')
+    progressElement.classList.remove('hide')
     setNextQuestion()
     scoreTracker.classList.remove('hide');
     scoreUpElement.textContent = 0;
@@ -66,6 +68,9 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
+        endGame.classList.remove('hide')
+        questionContainerElement.classList.add('hide')
+        progressElement.classList.add('hide')
     }
 }
 
